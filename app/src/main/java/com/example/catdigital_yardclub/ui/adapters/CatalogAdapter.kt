@@ -3,6 +3,7 @@ package com.example.catdigital_yardclub.ui.adapters
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.catdigital_yardclub.R
 import com.example.catdigital_yardclub.model.Catalog
@@ -51,6 +52,7 @@ class CatalogAdapter(
                     catalog.name
                 setOnClickListener {
                     clickListener.onCatalogSelected(catalog)
+                    it.findNavController().navigate(R.id.action_CategoryFragment_to_SubcategoryFragment)
                 }
             }
         }

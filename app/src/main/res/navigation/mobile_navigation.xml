@@ -21,6 +21,23 @@
         android:name="com.example.catdigital_yardclub.ui.equipment.CategoryFragment"
         android:label="@string/title_category"
         tools:layout="@layout/fragment_category">
+
+        <action
+            android:id="@+id/action_CategoryFragment_to_SubcategoryFragment"
+            app:destination="@id/SubcategoryFragment" />
+        <action
+            android:id="@+id/action_CategoryFragment_to_navigation_equipment2"
+            app:destination="@id/navigation_equipment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/SubcategoryFragment"
+        android:name="com.example.catdigital_yardclub.ui.equipment.SubcategoryFragment"
+        android:label="@string/title_subcategory"
+        tools:layout="@layout/fragment_subcategory">
+        <action
+            android:id="@+id/action_SubcategoryFragment_to_CategoryFragment"
+            app:destination="@id/CategoryFragment" />
     </fragment>
 
     <fragment
