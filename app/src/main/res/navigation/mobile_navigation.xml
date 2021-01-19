@@ -9,7 +9,19 @@
         android:id="@+id/navigation_equipment"
         android:name="com.example.catdigital_yardclub.ui.equipment.RequestEquipmentFragment"
         android:label="@string/title_request_equipment"
-        tools:layout="@layout/fragment_equipment" />
+        tools:layout="@layout/fragment_equipment" >
+
+        <action
+            android:id="@+id/action_navigation_equipment_to_CategoryFragment"
+            app:destination="@id/CategoryFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/CategoryFragment"
+        android:name="com.example.catdigital_yardclub.ui.equipment.CategoryFragment"
+        android:label="@string/title_category"
+        tools:layout="@layout/fragment_category">
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_rental"
