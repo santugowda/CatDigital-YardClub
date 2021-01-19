@@ -38,6 +38,20 @@
         <action
             android:id="@+id/action_SubcategoryFragment_to_CategoryFragment"
             app:destination="@id/CategoryFragment" />
+
+        <action
+            android:id="@+id/action_SubcategoryFragment_to_ResultDetailsFragment"
+            app:destination="@+id/ResultDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ResultDetailsFragment"
+        android:name="com.example.catdigital_yardclub.ui.equipment.ResultDetailsFragment"
+        android:label="@string/title_result"
+        tools:layout="@layout/fragment_result_detail">
+        <action
+            android:id="@+id/action_ResultDetailsFragment_to_SubcategoryFragment"
+            app:destination="@id/SubcategoryFragment" />
     </fragment>
 
     <fragment

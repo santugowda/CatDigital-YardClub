@@ -6,6 +6,7 @@
     <string name="title_yard">My Yard</string>
     <string name="title_category">Category Fragment</string>
     <string name="title_subcategory">Subcategory Fragment</string>
+    <string name="title_result">Result Fragment</string>
     <string name="arrow">Arrow</string>
     <string name="request_equipment">Request Equipment</string>
     <string name="display_name">Name : </string>
