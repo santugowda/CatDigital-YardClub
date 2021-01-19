@@ -3,23 +3,29 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/navigation_equipment">
 
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.example.catdigital_yardclub.ui.home.HomeFragment"
-        android:label="@string/title_home"
+        android:id="@+id/navigation_equipment"
+        android:name="com.example.catdigital_yardclub.ui.equipment.RequestEquipmentFragment"
+        android:label="@string/title_request_equipment"
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.example.catdigital_yardclub.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/navigation_rental"
+        android:name="com.example.catdigital_yardclub.ui.activerental.ActiveRentalFragment"
+        android:label="@string/title_active_rental"
+        tools:layout="@layout/fragment_active_rental" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.example.catdigital_yardclub.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_requests"
+        android:name="com.example.catdigital_yardclub.ui.openrequests.OpenRequestsFragment"
+        android:label="@string/title_open_requests"
+        tools:layout="@layout/fragment_open_request" />
+
+    <fragment
+        android:id="@+id/navigation_yard"
+        android:name="com.example.catdigital_yardclub.ui.yard.YardFragment"
+        android:label="@string/title_yard"
+        tools:layout="@layout/fragment_yard" />
 </navigation>

@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">CatDigital-YardClub</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_request_equipment">Request Equipment</string>
+    <string name="title_active_rental">Active Rental</string>
+    <string name="title_open_requests">Open Request</string>
+    <string name="title_yard">My Yard</string>
 </resources>

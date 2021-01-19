@@ -1,4 +1,4 @@
-package com.example.catdigital_yardclub.ui.dashboard
+package com.example.catdigital_yardclub.ui.yard
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,20 +10,20 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.catdigital_yardclub.R
 
-class DashboardFragment : Fragment() {
+class YardFragment : Fragment() {
 
-    private lateinit var dashboardViewModel: DashboardViewModel
+    private lateinit var yardViewModel: YardViewModel
 
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        dashboardViewModel =
-                ViewModelProviders.of(this).get(DashboardViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_dashboard, container, false)
-        val textView: TextView = root.findViewById(R.id.text_dashboard)
-        dashboardViewModel.text.observe(viewLifecycleOwner, Observer {
+        yardViewModel =
+                ViewModelProviders.of(this).get(YardViewModel::class.java)
+        val root = inflater.inflate(R.layout.fragment_yard, container, false)
+        val textView: TextView = root.findViewById(R.id.text_myyard)
+        yardViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
         return root

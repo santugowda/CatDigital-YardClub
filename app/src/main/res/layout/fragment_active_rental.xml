@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.equipment.RequestEquipmentFragment">
+    tools:context=".ui.activerental.ActiveRentalFragment">
 
     <TextView
-        android:id="@+id/text_equipment_request"
+        android:id="@+id/text_active_rental"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"

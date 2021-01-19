@@ -1,13 +1,13 @@
-package com.example.catdigital_yardclub.ui.notifications
+package com.example.catdigital_yardclub.ui.yard
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class NotificationsViewModel : ViewModel() {
+class YardViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is notifications Fragment"
+        value = "This is Yard Fragment"
     }
     val text: LiveData<String> = _text
 }

@@ -1,4 +1,4 @@
-package com.example.catdigital_yardclub.ui.home
+package com.example.catdigital_yardclub.ui.equipment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,20 +10,20 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.catdigital_yardclub.R
 
-class HomeFragment : Fragment() {
+class RequestEquipmentFragment : Fragment() {
 
-    private lateinit var homeViewModel: HomeViewModel
+    private lateinit var requestEquipmentViewModel: RequestEquipmentViewModel
 
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        homeViewModel =
-                ViewModelProviders.of(this).get(HomeViewModel::class.java)
+        requestEquipmentViewModel =
+                ViewModelProviders.of(this).get(RequestEquipmentViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_home, container, false)
-        val textView: TextView = root.findViewById(R.id.text_home)
-        homeViewModel.text.observe(viewLifecycleOwner, Observer {
+        val textView: TextView = root.findViewById(R.id.text_equipment_request)
+        requestEquipmentViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
         return root
