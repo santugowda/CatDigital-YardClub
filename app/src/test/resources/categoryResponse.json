@@ -1,0 +1,38 @@
+[
+  {
+    "id": 9,
+    "name": "Backhoes"
+  },
+  {
+    "id": 4,
+    "name": "Dirt Compactors"
+  },
+  {
+    "id": 5,
+    "name": "Dozers"
+  },
+  {
+    "id": 6,
+    "name": "Excavators"
+  },
+  {
+    "id": 1,
+    "name": "Rollers - AC Double Drum "
+  },
+  {
+    "id": 3,
+    "name": "Rollers (Dirt) - Pad Drum"
+  },
+  {
+    "id": 2,
+    "name": "Rollers (Dirt) - Smooth Drum"
+  },
+  {
+    "id": 8,
+    "name": "Skip Loaders"
+  },
+  {
+    "id": 7,
+    "name": "Wheel Loaders"
+  }
+]

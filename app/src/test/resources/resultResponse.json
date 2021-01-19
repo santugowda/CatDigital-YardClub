@@ -1,0 +1,34 @@
+{
+  "display_name": "D8 Dozer",
+  "results": [
+    {
+      "id": 2985,
+      "name": "CAT D8N",
+      "description": "Oper. Wt. 83K lbs",
+      "daily_rate": "$1,525",
+      "weekly_rate": "$4,575",
+      "monthly_rate": "$13,700",
+      "operated_rates": ""
+    },
+    {
+      "id": 3126,
+      "name": "John Deere 1050",
+      "description": "Oper. Wt. 93K",
+      "daily_rate": "$1,675",
+      "weekly_rate": "$5,025",
+      "monthly_rate": "$15,100",
+      "operated_rates": "100/hr"
+    }
+  ],
+  "featured_photos": [
+    {
+      "url": "https://i.imgur.com/xOLhwwF.gif"
+    },
+    {
+      "url": "https://i.imgur.com/88c43pd.gif"
+    },
+    {
+      "url": "https://i.imgur.com/JYslfWq.jpg"
+    }
+  ]
+}

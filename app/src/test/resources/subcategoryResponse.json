@@ -1,0 +1,37 @@
+[
+  {
+    "id": 23,
+    "detail": "D4 Dozers",
+    "display_name": "D4 Dozer"
+  },
+  {
+    "id": 9,
+    "detail": "D5 Dozers",
+    "display_name": "D5 Dozer"
+  },
+  {
+    "id": 22,
+    "detail": "D6 Dozers",
+    "display_name": "D6 Dozer"
+  },
+  {
+    "id": 34,
+    "detail": "D8 Dozers",
+    "display_name": "D8 Dozer"
+  },
+  {
+    "id": 35,
+    "detail": "D9 Dozers",
+    "display_name": "D9 Dozer"
+  },
+  {
+    "id": 86,
+    "detail": "D10 Dozers",
+    "display_name": "D10 Dozer"
+  },
+  {
+    "id": 87,
+    "detail": "D11 Dozers",
+    "display_name": "D11 Dozer"
+  }
+]
