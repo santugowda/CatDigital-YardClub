@@ -8,13 +8,18 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.viewpager2.widget.ViewPager2
+import com.example.catdigital.ui.adapters.FeaturedImagesPagerAdapter
 import com.example.catdigital_yardclub.R
 import com.example.catdigital_yardclub.network.NetworkResponse
 import com.example.catdigital_yardclub.ui.adapters.ResultAdapter
 import com.example.catdigital_yardclub.viewmodel.YardClubViewModel
+import com.google.android.material.tabs.TabLayout
+import com.google.android.material.tabs.TabLayoutMediator
 
 class ResultDetailsFragment : Fragment() {
 
+    private var featuredImagesPagerAdapter: FeaturedImagesPagerAdapter? = null
     private lateinit var yardClubViewModel: YardClubViewModel
     private var resultAdapter: ResultAdapter? = null
 
@@ -33,6 +38,13 @@ class ResultDetailsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val viewPager = view.findViewById(R.id.featuredViewpager) as ViewPager2
+        val tabLayout = view.findViewById(R.id.tabLayout) as TabLayout
+        featuredImagesPagerAdapter = FeaturedImagesPagerAdapter(requireContext(), arrayListOf())
+        viewPager.adapter = featuredImagesPagerAdapter
+        TabLayoutMediator(tabLayout, viewPager) { tab, position ->
+        }.attach()
+
         resultAdapter = ResultAdapter(arrayListOf())
         val resultRecyclerView: RecyclerView = view.findViewById(R.id.resultRecycler)
         val layoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
@@ -48,6 +60,13 @@ class ResultDetailsFragment : Fragment() {
                     if (response.data != null) {
                         response.data.results?.let { result ->
                             resultAdapter?.addAll(result)
+                        }
+
+                        val featureImagesList = response.data.featuredPhotos
+                        val nameMap: List<String>
+                        if(featureImagesList != null) {
+                            nameMap = featureImagesList.map { it.url.toString() }
+                            featuredImagesPagerAdapter?.setImageList(ArrayList(nameMap))
                         }
                     }
                 }
