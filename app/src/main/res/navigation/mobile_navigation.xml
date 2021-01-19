@@ -9,7 +9,7 @@
         android:id="@+id/navigation_equipment"
         android:name="com.example.catdigital_yardclub.ui.equipment.RequestEquipmentFragment"
         android:label="@string/title_request_equipment"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_equipment" />
 
     <fragment
         android:id="@+id/navigation_rental"

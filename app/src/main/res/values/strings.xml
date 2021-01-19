@@ -4,4 +4,20 @@
     <string name="title_active_rental">Active Rental</string>
     <string name="title_open_requests">Open Request</string>
     <string name="title_yard">My Yard</string>
+    <string name="arrow">Arrow</string>
+    <string name="request_equipment">Request Equipment</string>
+    <string name="display_name">Name : </string>
+    <string name="display_details">Details : </string>
+    <string name="description_details">Description : </string>
+    <string name="monthly_price">Monthly Rate : </string>
+    <string name="featured_equipment">Featured Equipment</string>
+    <string name="choose_rental_store">Choose Rental Store</string>
+    <string name="rental_store">Rental Store</string>
+    <string name="rental_subtext1">Newest rental fleet in the industry</string>
+    <string name="rental_subtext3">Quick response time on availability</string>
+    <string name="rental_subtext2">Unlimited length of Rental</string>
+    <string name="contractor_owned">Contractor Owned</string>
+    <string name="contract_subtext1">Fixed rental length</string>
+    <string name="contract_subtext2">24-hr response time</string>
+    <string name="contract_subtext3">Discounted price</string>
 </resources>
