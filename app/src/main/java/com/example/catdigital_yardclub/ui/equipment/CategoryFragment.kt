@@ -72,6 +72,14 @@ class CategoryFragment : Fragment(), CatalogAdapter.OnCatalogEventListener {
 
     override fun onCatalogSelected(catalog: Catalog) {
         catalogSharedViewModel.catalogSelected(catalog)
+        showSubcategoryFragment()
+    }
+
+    private fun showSubcategoryFragment() {
+        val subcategoryFragment = SubcategoryFragment()
+        activity?.supportFragmentManager?.beginTransaction()
+            ?.replace(R.id.equipmentContainer, subcategoryFragment, SubcategoryFragment.TAG)
+            ?.addToBackStack(null)?.commit()
     }
 
     companion object {

@@ -55,7 +55,7 @@ class SubcategoriesAdapter(
                     context.getString(R.string.display_details).plus(catalogItems.detail)
                 setOnClickListener {
                     subcategoryEventListener.onSubcategorySelected(catalogItems)
-                    it.findNavController().navigate(R.id.action_SubcategoryFragment_to_ResultDetailsFragment)
+//                    it.findNavController().navigate(R.id.action_SubcategoryFragment_to_ResultDetailsFragment)
                 }
             }
         }

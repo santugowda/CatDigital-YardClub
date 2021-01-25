@@ -22,9 +22,9 @@ class SubcategoryFragment : Fragment(), SubcategoriesAdapter.OnSubcategoryEventL
     private var subcategoriesAdapter: SubcategoriesAdapter? = null
 
     override fun onCreateView(
-            inflater: LayoutInflater,
-            container: ViewGroup?,
-            savedInstanceState: Bundle?
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View? {
         return inflater.inflate(R.layout.fragment_subcategory, container, false)
     }
@@ -32,7 +32,8 @@ class SubcategoryFragment : Fragment(), SubcategoriesAdapter.OnSubcategoryEventL
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         yardClubViewModel = ViewModelProvider(this).get(YardClubViewModel::class.java)
-        catalogSharedViewModel = ViewModelProvider(requireActivity()).get(CatalogSharedViewModel::class.java)
+        catalogSharedViewModel =
+            ViewModelProvider(requireActivity()).get(CatalogSharedViewModel::class.java)
         subcategoriesAdapter = SubcategoriesAdapter(arrayListOf(), this)
         val catalogRecyclerView: RecyclerView = view.findViewById(R.id.subcategoryRecycler)
         val layoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
@@ -41,32 +42,40 @@ class SubcategoryFragment : Fragment(), SubcategoriesAdapter.OnSubcategoryEventL
         displaySubcategoryView()
     }
 
-    private fun displaySubcategoryView(){
+    private fun displaySubcategoryView() {
         catalogSharedViewModel.selectedId.value?.id?.let {
-            yardClubViewModel.catalogItems(it).observe(viewLifecycleOwner, Observer {catalogItems ->
-                when(catalogItems.status) {
-                    NetworkResponse.NetworkStatus.SUCCESS -> {
-                        subcategoryProgress.visibility = View.GONE
-                        if(catalogItems.data != null){
-                            subcategoriesAdapter?.addAll(catalogItems.data)
+            yardClubViewModel.catalogItems(it)
+                .observe(viewLifecycleOwner, Observer { catalogItems ->
+                    when (catalogItems.status) {
+                        NetworkResponse.NetworkStatus.SUCCESS -> {
+                            subcategoryProgress.visibility = View.GONE
+                            if (catalogItems.data != null) {
+                                subcategoriesAdapter?.addAll(catalogItems.data)
+                            }
+                        }
+
+                        NetworkResponse.NetworkStatus.ERROR -> {
+
+                        }
+
+                        NetworkResponse.NetworkStatus.IN_PROGRESS -> {
+                            subcategoryProgress.visibility = View.VISIBLE
+
                         }
                     }
-
-                    NetworkResponse.NetworkStatus.ERROR-> {
-
-                    }
-
-                    NetworkResponse.NetworkStatus.IN_PROGRESS->{
-                        subcategoryProgress.visibility = View.VISIBLE
-
-                    }
-                }
-            })
+                })
         }
     }
 
     override fun onSubcategorySelected(catalogItems: CatalogItems) {
+        showResultFragment()
+    }
 
+    private fun showResultFragment() {
+        val resultDetailsFragment = ResultDetailsFragment()
+        activity?.supportFragmentManager?.beginTransaction()
+            ?.replace(R.id.equipmentContainer, resultDetailsFragment, ResultDetailsFragment.TAG)
+            ?.addToBackStack(null)?.commit()
     }
 
     companion object {

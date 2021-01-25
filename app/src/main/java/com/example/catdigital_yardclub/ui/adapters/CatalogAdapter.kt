@@ -52,7 +52,7 @@ class CatalogAdapter(
                     catalog.name
                 setOnClickListener {
                     clickListener.onCatalogSelected(catalog)
-                    it.findNavController().navigate(R.id.action_CategoryFragment_to_SubcategoryFragment)
+//                    it.findNavController().navigate(R.id.action_CategoryFragment_to_SubcategoryFragment)
                 }
             }
         }
